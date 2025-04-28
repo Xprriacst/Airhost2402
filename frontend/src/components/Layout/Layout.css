@@ -1,0 +1,31 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #FFFFFF;
+  overflow: hidden; /* Empêcher les scrollbars inutiles */
+  position: relative; /* Important pour le positionnement correct */
+}
+
+.main-content {
+  flex: 1;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  transition: margin-left 0.3s ease;
+  overflow: hidden;
+  padding: 0; /* Supprimer tout padding */
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 769px) {
+  .main-content {
+    margin-left: 250px; /* Restaurer la marge pour le menu latéral en desktop */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* Suppression de la marge pour le menu mobile */
+  }
+}
